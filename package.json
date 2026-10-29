@@ -1,0 +1,11 @@
+{
+  "name": "weighbridge-billing",
+  "version": "2.0.0",
+  "description": "Shiv Minerals - Weighbridge & Billing Management System",
+  "scripts": {
+    "dev:backend": "cd backend && uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "test:backend": "cd backend && python -m pytest"
+  }
+}
