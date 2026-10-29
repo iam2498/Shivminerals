@@ -38,6 +38,7 @@ app.include_router(loads.router)
 app.include_router(payments.router)
 app.include_router(employees.router)
 app.include_router(expenses.router)
+app.include_router(expenses.category_router)
 app.include_router(reports.router)
 app.include_router(common.router)
 

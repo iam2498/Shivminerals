@@ -143,6 +143,18 @@ export const T = {
     viewReport: 'View Report',
     expReport: 'Expenses Report',
     printReport: 'Print Report',
+    category: 'Expense Category',
+    pickCategory: 'Select Expense Category',
+    otherCategory: '+ Other (Enter custom category)',
+    customCategory: 'Custom Category Name',
+    customCategoryPlaceholder: 'e.g. Mobile Recharge, Bike Petrol, Food, etc.',
+    allCategories: 'All Categories',
+    manageCategories: 'Configure Categories',
+    addCategory: 'Add Category',
+    newCategoryName: 'New Category Name',
+    categoryAdded: 'Category added successfully',
+    categoryDeleted: 'Category deleted successfully',
+    catBreakdown: 'Category-wise Breakdown',
   },
   gu: {
     appTitle: 'શિવ મિનરલ્સ',
@@ -277,7 +289,45 @@ export const T = {
     viewReport: 'રિપોર્ટ જુઓ',
     expReport: 'ખર્ચ રિપોર્ટ',
     printReport: 'રિપોર્ટ પ્રિન્ટ કરો',
+    category: 'ખર્ચ કેટેગરી',
+    pickCategory: 'ખર્ચ કેટેગરી પસંદ કરો',
+    otherCategory: '+ અન્ય (નવી કેટેગરી લખો)',
+    customCategory: 'નવી કેટેગરીનું નામ',
+    customCategoryPlaceholder: 'દા.ત. મોબાઈલ રિચાર્જ, પેટ્રોલ, જમવાનું, વગેરે',
+    allCategories: 'બધી કેટેગરીઓ',
+    manageCategories: 'કેટેગરી ગોઠવો',
+    addCategory: 'કેટેગરી ઉમેરો',
+    newCategoryName: 'નવી કેટેગરીનું નામ',
+    categoryAdded: 'કેટેગરી સફળતાપૂર્વક ઉમેરાઈ',
+    categoryDeleted: 'કેટેગરી કાઢી નાખવામાં આવી',
+    catBreakdown: 'કેટેગરી મુજબ ખર્ચ',
   },
+};
+
+export const categoryDisplay = (cat, lang = 'en') => {
+  if (!cat) return '-';
+  if (lang !== 'gu') return cat;
+  const map = {
+    'Mobile Recharge': 'મોબાઈલ રિચાર્જ',
+    'Personal Bike Petrol': 'બાઇક પેટ્રોલ',
+    'Food and Meals': 'જમવાનું / ભોજન',
+    'Tea and Snacks': 'ચા - નાસ્તો',
+    'Masala / Tobacco': 'મસાલા / તમાકુ',
+    'Personal Purchase': 'અંગત ખરીદી',
+    'Salary Advance': 'પગાર એડવાન્સ (ઉપાડ)',
+    'Other Personal Withdrawal': 'અન્ય ઉપાડ',
+    'Diesel': 'ડીઝલ',
+    'Vehicle Repair': 'વાહન રિપેરિંગ',
+    'Electricity': 'લાઈટ બિલ',
+    'Site / Office Rent': 'સાઈટ / ઓફિસ ભાડું',
+    'Other': 'અન્ય',
+    'other': 'અન્ય',
+    'repair': 'રિપેરિંગ',
+    'diesel': 'ડીઝલ',
+    'elec': 'લાઈટ બિલ',
+    'rent': 'ભાડું',
+  };
+  return map[cat] || cat;
 };
 
 export const t = (key, lang = 'en') => {
